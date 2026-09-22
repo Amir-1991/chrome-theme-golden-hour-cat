@@ -1,0 +1,20 @@
+# IDE
+.idea/
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Chrome extension packages
+*.crx
+*.pem
+
+# Build / distribution
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
