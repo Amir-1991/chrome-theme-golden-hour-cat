@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +7,254 @@
     <title>Golden Hour Cat</title>
 
     <!-- Golden Hour Cat Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23101c26'/%3E%3Cstop offset='100%25' stop-color='%232d5269'/%3E%3C/linearGradient%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='0' dy='3' stdDeviation='3' flood-opacity='.45'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='128' height='128' rx='30' fill='url(%23bg)'/%3E%3Ccircle cx='64' cy='64' r='47' fill='none' stroke='%23f5d58a' stroke-width='3' opacity='.8'/%3E%3Cpath d='M38 53 L42 31 L57 45 Q64 42 71 45 L86 31 L90 53 Q96 62 94 76 Q91 96 64 99 Q37 96 34 76 Q32 62 38 53Z' fill='%23f5d58a' filter='url(%23shadow)'/%3E%3Cellipse cx='51' cy='65' rx='5' ry='7' fill='%23101c26'/%3E%3Cellipse cx='77' cy='65' rx='5' ry='7' fill='%23101c26'/%3E%3Cpath d='M59 78 Q64 82 69 78' fill='none' stroke='%23101c26' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23101c26'/%3E%3Cstop offset='100%25' stop-color='%232d5269'/%3E%3C/linearGradient%3E%3Cfilter id='shadow'%3E%3CfeDropShadow dx='0' dy='3' stdDeviation='3' flood-opacity='.45'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='128' height='128' rx='30' fill='url(%23bg)'/%3E%3Ccircle cx='64' cy='64' r='47' fill='none' stroke='%23f5d58a' stroke-width='3' opacity='.8'/%3E%3Cpath d='M38 53 L42 31 L57 45 Q64 42 71 45 L86 31 L90 53 Q96 62 94 76 Q91 96 64 99 Q37 96 34 76 Q32 62 38 53Z' fill='%23f5d58a' filter='url(%23shadow)'/%3E%3Cellipse cx='51' cy='65' rx='5' ry='7' fill='%23101c26'/%3E%3Cellipse cx='77' cy='65' rx='5' ry='7' fill='%23101c26'/%3E%3Cpath d='M59 78 Q64 82 69 78' fill='none' stroke='%23101c26' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+    >
 
     <link rel="stylesheet" href="newtab.css">
 </head>
 
 <body>
 
-    <div id="background"></div>
+<div id="background"></div>
+
+<!-- =========================================
+     Top Right Controls
+     ========================================= -->
+
+<div id="top-controls">
 
     <div id="clock"></div>
 
-    <div id="google">
+    <button
+        id="account-button"
+        class="top-button"
+        type="button"
+        aria-label="Google Account"
+        title="Google Account">
+        <span class="account-icon">●</span>
+    </button>
 
-        <div id="google-logo" aria-label="Google">
-            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
-                class="blue">g</span><span class="green">l</span><span class="red">e</span>
-        </div>
+    <button
+        id="apps-button"
+        class="top-button"
+        type="button"
+        aria-label="Google Apps"
+        title="Google Apps">
+        <span class="apps-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </button>
 
-        <form id="search-form">
+</div>
 
-            <div id="search-box">
+<!-- =========================================
+     Google Apps Panel
+     ========================================= -->
 
-                <span id="search-icon">⌕</span>
+<div id="apps-panel" class="glass-panel">
 
-                <input id="search-input" type="text" autocomplete="off" spellcheck="false"
-                    placeholder="Search Google or type a URL" aria-label="Search Google">
+    <div class="panel-title">
+        Google Apps
+    </div>
 
-                <button id="clear-button" type="button" aria-label="Clear">
-                    ×
-                </button>
+    <div class="apps-grid">
 
-            </div>
+        <a
+            class="app-item"
+            href="https://mail.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon gmail-icon">✉</span>
+            <span>Gmail</span>
+        </a>
 
-        </form>
+        <a
+            class="app-item"
+            href="https://drive.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon drive-icon">▣</span>
+            <span>Drive</span>
+        </a>
+
+        <a
+            class="app-item"
+            href="https://calendar.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon calendar-icon">31</span>
+            <span>Calendar</span>
+        </a>
+
+        <a
+            class="app-item"
+            href="https://photos.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon photos-icon">◉</span>
+            <span>Photos</span>
+        </a>
+
+        <a
+            class="app-item"
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon youtube-icon">▶</span>
+            <span>YouTube</span>
+        </a>
+
+        <a
+            class="app-item"
+            href="https://docs.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon docs-icon">▤</span>
+            <span>Docs</span>
+        </a>
+
+        <a
+            class="app-item"
+            href="https://sheets.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon sheets-icon">▦</span>
+            <span>Sheets</span>
+        </a>
+
+        <a
+            class="app-item"
+            href="https://maps.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon maps-icon">●</span>
+            <span>Maps</span>
+        </a>
+
+        <a
+            class="app-item"
+            href="https://meet.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="app-icon meet-icon">▣</span>
+            <span>Meet</span>
+        </a>
 
     </div>
 
-    <script src="newtab.js"></script>
+    <a
+        id="more-google-apps"
+        href="https://www.google.com/intl/en/about/products"
+        target="_blank"
+        rel="noopener noreferrer">
+        More from Google
+    </a>
+
+</div>
+
+<!-- =========================================
+     Google Account Panel
+     ========================================= -->
+
+<div id="account-panel" class="glass-panel">
+
+    <div class="account-avatar">
+        <span>G</span>
+    </div>
+
+    <div class="account-title">
+        Google Account
+    </div>
+
+    <div class="account-description">
+        Manage your Google Account
+    </div>
+
+    <a
+        class="account-link"
+        href="https://myaccount.google.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Manage your Google Account
+    </a>
+
+    <div class="account-shortcuts">
+
+        <a
+            href="https://mail.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Gmail
+        </a>
+
+        <a
+            href="https://drive.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Drive
+        </a>
+
+        <a
+            href="https://myaccount.google.com/security"
+            target="_blank"
+            rel="noopener noreferrer">
+            Security
+        </a>
+
+    </div>
+
+</div>
+
+<!-- =========================================
+     Google Search
+     ========================================= -->
+
+<div id="google">
+
+    <div id="google-logo" aria-label="Google">
+        <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+    </div>
+
+    <form id="search-form">
+
+        <div id="search-box">
+
+            <span id="search-icon">⌕</span>
+
+            <input
+                id="search-input"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Search Google or type a URL"
+                aria-label="Search Google"
+            >
+
+            <button
+                id="clear-button"
+                type="button"
+                aria-label="Clear">
+                ×
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+<script src="newtab.js"></script>
 
 </body>
-
 </html>
