@@ -1,0 +1,321 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    background: #101c26;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =========================================
+   Background
+   ========================================= */
+
+#background {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    background-color: #101c26;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   Clock
+   ========================================= */
+
+#clock {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    color: rgba(235, 247, 255, 0.95);
+
+    font-size: clamp(18px, 1.5vw, 32px);
+    font-weight: 500;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.65),
+        0 0 14px rgba(120, 190, 230, 0.18);
+
+    user-select: none;
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   Google Area
+   ========================================= */
+
+#google {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, calc(-50% - 25vh))
+        scale(0.7);
+
+    transform-origin: center center;
+
+    width: 720px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   Google Logo
+   ========================================= */
+
+#google-logo {
+    margin-bottom: 28px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 82px;
+    font-weight: 600;
+
+    letter-spacing: -5px;
+    line-height: 1;
+
+    color: rgba(245, 250, 255, 0.96);
+
+    user-select: none;
+
+    text-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.55),
+        0 0 20px rgba(110, 190, 235, 0.18);
+}
+
+#google-logo .blue,
+#google-logo .red,
+#google-logo .yellow,
+#google-logo .green {
+    color: inherit;
+}
+
+
+/* =========================================
+   Search Form
+   ========================================= */
+
+#search-form {
+    width: 100%;
+}
+
+
+/* =========================================
+   Search Box
+   Blue Glass
+   ========================================= */
+
+#search-box {
+    width: 100%;
+    height: 62px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    border-radius: 31px;
+
+    /*
+     * Real blue tint.
+     * The first layer gives the glass a cool blue tone.
+     * The second layer gives it depth without turning brown.
+     */
+    background:
+        linear-gradient(
+            135deg,
+            rgba(105, 165, 200, 0.48),
+            rgba(35, 85, 120, 0.42)
+        );
+
+    border: 1px solid rgba(205, 235, 250, 0.55);
+
+    box-shadow:
+        0 10px 35px rgba(0, 15, 30, 0.38),
+        0 0 18px rgba(65, 145, 190, 0.16),
+        inset 0 1px 1px rgba(255, 255, 255, 0.38),
+        inset 0 -1px 2px rgba(10, 35, 55, 0.20);
+
+    backdrop-filter:
+        blur(18px)
+        saturate(150%);
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(150%);
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   Search Box Focus
+   ========================================= */
+
+#search-box:focus-within {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(125, 190, 225, 0.58),
+            rgba(40, 100, 140, 0.50)
+        );
+
+    border-color:
+        rgba(225, 245, 255, 0.72);
+
+    box-shadow:
+        0 12px 40px rgba(0, 15, 30, 0.44),
+        0 0 24px rgba(70, 165, 215, 0.24),
+        inset 0 1px 2px rgba(255, 255, 255, 0.44),
+        inset 0 -1px 2px rgba(10, 35, 55, 0.22);
+}
+
+
+/* =========================================
+   Search Icon
+   ========================================= */
+
+#search-icon {
+    width: 26px;
+
+    margin-right: 12px;
+
+    color: rgba(225, 245, 255, 0.88);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+    line-height: 1;
+
+    transform: rotate(-20deg);
+
+    text-shadow:
+        0 1px 5px rgba(0, 20, 35, 0.45);
+
+    user-select: none;
+}
+
+
+/* =========================================
+   Search Input
+   ========================================= */
+
+#search-input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #f2f9fd;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    font-size: 18px;
+
+    text-shadow:
+        0 1px 4px rgba(0, 20, 35, 0.30);
+}
+
+
+/* =========================================
+   Placeholder
+   ========================================= */
+
+#search-input::placeholder {
+    color: rgba(235, 247, 255, 0.78);
+}
+
+
+/* =========================================
+   Clear Button
+   ========================================= */
+
+#clear-button {
+    display: none;
+
+    width: 32px;
+    height: 32px;
+
+    margin-left: 8px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: rgba(230, 247, 255, 0.82);
+
+    font-size: 25px;
+    line-height: 32px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+
+/* =========================================
+   Clear Button Hover
+   ========================================= */
+
+#clear-button:hover {
+    background: rgba(220, 245, 255, 0.16);
+
+    color: rgba(255, 255, 255, 0.98);
+}
+
+
+/* =========================================
+   Responsive
+   ========================================= */
+
+@media (max-width: 760px) {
+
+    #google {
+        width: calc(100% - 40px);
+    }
+
+    #search-form {
+        width: 100%;
+    }
+
+    #google-logo {
+        font-size: 64px;
+    }
+}

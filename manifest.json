@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+
+  "name": "Golden Hour Cat - Adaptive 8K",
+
+  "version": "2.0.0",
+
+  "description": "Adaptive golden-hour cat New Tab background.",
+
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  }
+}
